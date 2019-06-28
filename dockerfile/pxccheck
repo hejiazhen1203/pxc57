@@ -1,0 +1,15 @@
+service pxccheck
+{
+	disable		= no
+	flags		= REUSE
+	type		= UNLISTED
+	port		= 19200
+	server		= /usr/bin/clustercheck
+	log_on_failure	+= USERID
+	only_from	= 0.0.0.0/0
+	per_source	= UNLIMITED
+	socket_type	= stream
+	protocol	= tcp
+	user		= mysql
+	wait		= no
+}

@@ -13,6 +13,7 @@ services:
       - 4444:4444
       - 4567:4567
       - 4568:4568
+      - 19200:19200
     volumes:
       - _WORKDIR_/conf/pxc-_NODE_.cnf:/etc/mysql/my.cnf
       - _WORKDIR_/conf/.pxc-_NODE__runtime.env:/.app_runtime.env

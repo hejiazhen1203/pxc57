@@ -76,6 +76,7 @@ if [ "$BOOTSTRAP" = "true" ]; then
 		GRANT RELOAD,PROCESS,LOCK TABLES,REPLICATION CLIENT ON *.* TO 'xtrabackup'@'localhost';
 		GRANT REPLICATION CLIENT ON *.* TO monitor@'%' IDENTIFIED BY 'monitor';
 		GRANT PROCESS ON *.* TO monitor@localhost IDENTIFIED BY 'monitor';
+		GRANT PROCESS ON *.* TO 'clustercheckuser'@'localhost' IDENTIFIED BY 'clustercheckpassword!';
 		DROP DATABASE IF EXISTS test ;
 		FLUSH PRIVILEGES ;
 	EOSQL
@@ -113,6 +114,7 @@ if [ "$BOOTSTRAP" = "true" ]; then
     fi
 fi
 
+/etc/init.d/xinetd start
 #--log-error=${DATADIR}error.log
 exec "${mysqld[@]}" $CMDARG
 
