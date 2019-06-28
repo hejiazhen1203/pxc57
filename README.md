@@ -1,6 +1,7 @@
 ####	说明
 
-该脚本实现基于docker部署Percona XtraDB Cluster 5.7集群，默认为三节点，可根据需求修改脚本，pxc镜像的Dockerfile也可根据自己需求改动。
+1. 该脚本实现基于docker部署Percona XtraDB Cluster 5.7集群，默认为三节点，可根据需求修改脚本，pxc镜像的Dockerfile也可根据自己需求改动。
+2. mysql的参数根据自己需求修改，模板为templates/my.cnf.tpl，当前只是随便设了点参数。
 
 ####	使用
 
