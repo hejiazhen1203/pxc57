@@ -36,7 +36,7 @@
    export MYSQL_ROOT_PASSWORD=""
    ```
 
-   3. 部署
+3. 部署
 
       ※ 注：部署或者后面启动第一个节点的时候都需要加上参数：--bootstrap
 
@@ -53,6 +53,6 @@
       ./op.sh check node2
       ```
 
-   4. 验证
+4. 验证
 
-   5. 下一步，使用xinetd配置健康检查服务(/usr/bin/clustercheck)，然后前端使用haproxy代理并httpchk
+5. 下一步，使用xinetd配置健康检查服务(/usr/bin/clustercheck)，然后前端使用haproxy代理并httpchk
